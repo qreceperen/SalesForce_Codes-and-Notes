@@ -8,3 +8,17 @@
 string tempvar = 'Enter_your_name_here';
 System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
+
+
+@IsTest
+static void 
+
+(){
+    
+    Test.startTest();
+    System.runAs(contextuser){
+        
+    }
+    Test.stopTest();
+    
+}
