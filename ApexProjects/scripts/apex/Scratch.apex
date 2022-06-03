@@ -10,7 +10,3 @@ System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
 
 
-
-
-HandledException
-how are you 
