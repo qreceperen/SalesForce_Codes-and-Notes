@@ -5,3 +5,9 @@
 
 
 
+// // For Loop
+// for (Account acc:myAccount){
+//     System.debug('NAME: ')
+// }
+
+
