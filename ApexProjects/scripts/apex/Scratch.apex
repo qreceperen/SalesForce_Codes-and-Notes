@@ -11,3 +11,4 @@ System.debug('My name is ' + tempvar);
 
 
 
+SELECT firstName, LastName, Account.Name, Account.Phone, Account.AnnualRevenue FROM Contact
