@@ -11,4 +11,15 @@ System.debug('My name is ' + tempvar);
 
 
 
-SELECT firstName, LastName, Account.Name, Account.Phone, Account.AnnualRevenue FROM Contact
+string recordId = new String(); // Available for input
+Integer LoopCounter = new Integer();
+Integer Mod2 = LoopCounter,2;
+Record <Task> r_Task = new Record<Task>();
+
+List<Account> Get_Account = new List<Account>();
+List<Contact> Get_Contacts = new List<Contacts>();
+
+for(Account acc:Get_Account){
+    LoopCounter++;
+}
+
