@@ -11,7 +11,9 @@
 // }
 
 
+// // Duplicate class to use with variable
 
+// ClassName varName = new ClassName();
 
 
 
