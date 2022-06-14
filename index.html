@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-input[type=text], select {
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
 input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
+  background-color: #04AA6D;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -26,35 +30,64 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-div {
+.container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 20;
 }
 </style>
+</head>
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
 <body>
 
-<h3>Using CSS to style an HTML Form</h3>
-<a href="Enrollment.html">Enrollment.html</a>
+<h3>Registration Form</h3>
 
-<div>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<div class="container">
+	<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-  
-    <input type="submit" value="Submit">
-  </form>
+		<input type=hidden name="oid" value="00D8c000008QBzF">
+		<input type=hidden name="retURL" value="https://ridvanakay.github.io/thanks/">
+
+
+
+		<label for="first_name">First Name</label>
+        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
+
+		<label for="last_name">Last Name</label>
+        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
+        
+		<label for="email">Email</label>
+        <input  id="email" maxlength="80" name="email" size="20"type="text" /><br>
+        
+		<label for="phone">Phone</label>
+        <input  id="phone" maxlength="40" name="phone" size="20"type="text" /><br>
+        
+		<label for="mobile">Mobile</label>
+        <input  id="mobile" maxlength="40" name="mobile" size="20"type="text" /><br>
+        
+		<label for="street">Street</label>
+        <textarea name="street"></textarea><br>
+        
+		<label for="city">City</label>
+        <input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
+        
+		<label for="state">State/Province</label>
+        <input  id="state" maxlength="20" name="state" size="20"type="text" /><br>
+        
+		<label for="zip">Zip</label>
+        <input  id="zip" maxlength="20" name="zip" size="20" type="text" /><br>
+        
+		<label for="country">Country</label>
+        <input  id="country" maxlength="40" name="country" size="20"type="text" /><br>
+        
+		<input type="submit" name="submit">
+
+</form>
 </div>
+
 
 </body>
 </html>
