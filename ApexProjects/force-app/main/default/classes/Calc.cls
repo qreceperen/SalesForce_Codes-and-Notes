@@ -26,6 +26,7 @@ public class Calc {
         }
         
         return result;
+        DENEME
 
     }
 }
