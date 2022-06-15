@@ -26,11 +26,6 @@ public class Calc {
         }
         
         return result;
-        DENEME
-
-
-
-        DENEME2
-        HOTFIX
+     
     }
 }
