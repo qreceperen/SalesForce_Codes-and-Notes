@@ -1,5 +1,5 @@
 trigger TriggerTemplate on Lead (before insert,after insert,before update, after update,before delete, after delete, after undelete) {
-    
+
             switch on Trigger.operationType {
                 when BEFORE_INSERT {
                     for(Lead singleLead:Trigger.new){
