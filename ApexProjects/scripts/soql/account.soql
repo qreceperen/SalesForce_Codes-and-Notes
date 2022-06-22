@@ -7,7 +7,7 @@
 
 // SELECT firstName, LastName, Account.Name, Account.Phone, Account.AnnualRevenue FROM Contact 
 
-SELECT Id, Name, Account.Name  FROM Contact
+SELECT Name, NumberOfEmployees FROM Account WHERE Name LIKE 'VS%'
 
 
 
