@@ -1,7 +1,10 @@
-List<Contact> conList = new List<Contact> {
-    new Contact(FirstName='Joe',LastName='Smith',Department='Finance'),
-        new Contact(FirstName='Kathy',LastName='Smith',Department='Technology'),
-        new Contact(FirstName='Caroline',LastName='Roth',Department='Finance'),
-        new Contact(FirstName='Kim',LastName='Shain',Department='Education')};
-// Bulk insert all contacts with one DML call
-insert conList;
+// How to get a value from a Map
+
+List<Account> ls = [SELECT Id,Name,Industry FROM Account];
+Map<Id,Account> m = new Map<Id,Account>(ls);
+
+for(String key : m.keyset()){ // iterate the map
+    system.debug(m.get(key).Name); // take Name field from map
+    system.debug(m.get(key).Industry);
+    
+}
