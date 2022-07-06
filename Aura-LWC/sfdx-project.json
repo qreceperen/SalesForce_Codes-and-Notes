@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "VisualForce",
+  "name": "Aura-LWC",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "55.0"
