@@ -1,0 +1,8 @@
+<apex:page standardController="Account">
+  
+Account ID = {!account.id} <br/>
+Account Name = {!account.name} <br/>
+Annual Revenue = {!account.annualrevenue}<br/>
+  
+  <apex:detail />
+</apex:page>
