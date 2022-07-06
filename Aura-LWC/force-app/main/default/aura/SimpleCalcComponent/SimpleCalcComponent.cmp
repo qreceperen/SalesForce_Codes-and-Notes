@@ -15,5 +15,8 @@
         <hr/>
         
         <ui:button label = "+" press = "{!c.sumClientController}" class = "button"/>
+        <ui:button label="-" press = "{!c.subClientController}" class = "button"/>
+        <ui:button label="x" press = "{!c.mulClientController}" class = "button"/>
+        <ui:button label="/" press = "{!c.divClientController}" class = "button"/>
         
 </aura:component>	
