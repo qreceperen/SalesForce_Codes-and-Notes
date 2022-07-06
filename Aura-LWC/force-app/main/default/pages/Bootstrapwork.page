@@ -1,0 +1,21 @@
+<apex:page controller="buttoncontroller" >
+
+<apex:form >
+<Apex:commandButton value="Click Here" action="{!buttonclick}"/>
+</apex:form>
+
+Button Status : {!buttonstatus }
+
+
+<apex:pageBlock Title="Test Page Block">
+
+    <apex:pageblockSection title="page block section">
+        <p> Hello VSFORCE</p>
+        
+    </apex:pageBlockSection>
+
+
+</apex:pageBlock>
+
+
+</apex:page>
