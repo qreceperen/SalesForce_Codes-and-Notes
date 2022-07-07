@@ -25,6 +25,8 @@ public with sharing class SimpleCalcServerController {
         return number1/number2;
 
     }
+    @
+    
     
 
 }
