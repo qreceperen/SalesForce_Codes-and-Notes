@@ -1,22 +1,49 @@
-<aura:component controller = "SimpleCalcServerController">
+<aura:component controller = "SimpleCalcServerController" implements = "force:appHostable,
+                                                                        flexipage:availableforAllPageTypes,
+                                                                        flexipage:availableForRecordHome,
+                                                                        force:hasRecordId,
+                                                                        forceCommunity:availableForAllPageTypes,
+                                                                        force:lightningQuickAction">
 
         <aura:attribute name = "xnumber" type ="decimal" default ="0" />
         <aura:attribute name = "ynumber" type ="decimal" default ="0" />
         <aura:attribute name = "result" type = "decimal" default ="0" />
 
-        <h1>Aura Component Simple Calculator</h1>
-        X: Number = {!v.xnumber} 
-        Y: Number = {!v.ynumber} 
-        Result =   {!v.result} 
-
         <hr/>
-        <ui:inputNumber label ="Number X: " aura:id = "xno" value = "{!v.xnumber}" />
-        <ui:inputNumber label ="Number Y: " aura:id = "xno" value = "{!v.ynumber}" />
         <hr/>
         
-        <ui:button label = "+" press = "{!c.sumClientController}" class = "button"/>
         <ui:button label="-" press = "{!c.subClientController}" class = "button"/>
         <ui:button label="x" press = "{!c.mulClientController}" class = "button"/>
         <ui:button label="/" press = "{!c.divClientController}" class = "button"/>
+        
+        <aura:attribute name="title" type="String" default="Simple Calculator"/>
+        
+        <lightning:card>
+                <aura:set attribute="title">
+                        <lightning:icon iconName="utility:advanced_function" size="small"/>
+                        {! v.title }
+                </aura:set>
+                
+                
+                <aura:set attribute="footer">
+                        <lightning:button variant="brand" label="+" title="Brand action" onclick="{! c.sumClientController }" />
+                        <lightning:button variant="brand" label="-" title="Brand action" onclick="{! c.subClientController }" />
+                        <lightning:button variant="brand" label="X" title="Brand action" onclick="{! c.mulClientController }" />
+                        <lightning:button variant="brand" label="/" title="Brand action" onclick="{! c.divClientController }" />
+                </aura:set>
+                
+                <p class="slds-var-p-horizontal_small">
+                        <lightning:input type="number" name="Number X" label="Number X" value="{!v.xnumber}"/>
+                </p>
+
+                <p class="slds-var-p-horizontal_small">
+                        <lightning:input type="number" name="Number Y" label="Number Y" value="{!v.ynumber}"/>
+                </p>
+               
+                <p class="slds-var-p-horizontal_small">
+                <lightning:badge label="{!v.result}"/>
+                </p>
+
+    </lightning:card>
         
 </aura:component>	
