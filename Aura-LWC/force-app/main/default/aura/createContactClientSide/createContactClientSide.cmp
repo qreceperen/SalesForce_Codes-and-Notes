@@ -1,0 +1,29 @@
+<!--  ContactServerController is apex class. Reason it is placed here is to activate apex class to use in component. js reach the apex class. In order js to reach apex and request info we MUST add this controller -->
+<aura:component controller ="ContactServerController" > 
+
+<!-- default contact attribute. It sends default contact info in JSON -->
+     <aura:attribute name ="singleCont" type= "Contact" default =" 
+                  {'sobjectType':'Contact', 
+                   'FirstName':'',
+                   'LastName':'',
+                   'Phone':'',
+                   'Email':'',
+                  }  
+    
+    "/>
+
+<aura:attribute name ="contactid" type= "String"/>
+<aura:attribute name ="Message" type= "String"/>
+
+Message: {!v.Message}
+
+<ui:inputText label = "First Name" value = "{!v.singleCont.FirstName}"/>
+<ui:inputText label = "Last Name" value = "{!v.singleCont.LastName}"/>
+<ui:inputText label = "Phone" value = "{!v.singleCont.Phone}"/>
+<ui:inputText label = "Email" value = "{!v.singleCont.Email}"/>
+<!-- c.contactClientController is our js controller file. BE CAREFULL Apex attribute name and js Name MUST be different -->
+<ui:button label = "Create" press = "{!c.ContactClientController}"/>
+
+
+
+</aura:component>	

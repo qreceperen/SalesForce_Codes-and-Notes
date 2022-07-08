@@ -1,4 +1,14 @@
-<aura:component implements="flexipage:availableForAllPageTypes"  access="global">
+<aura:component implements = "force:appHostable,
+                                flexipage:availableforAllPageTypes,
+                                flexipage:availableForRecordHome,
+                                force:hasRecordId,
+                                forceCommunity:availableForAllPageTypes,
+                                force:lightningQuickAction">
+
+
+
+
+
     <lightning:button onclick="{! c.handleShowActiveSectionName }" label="Show Active Section Name"/>
     <lightning:button onclick="{! c.handleSetActiveSectionC }" label="Open Section C"/>
 
