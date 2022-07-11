@@ -1,0 +1,35 @@
+<aura:component controller ="AURAContactWlistServerController" implements = "force:appHostable,
+                                                                            flexipage:availableforAllPageTypes,
+                                                                            flexipage:availableForRecordHome,
+                                                                            force:hasRecordId,
+                                                                            forceCommunity:availableForAllPageTypes,
+                                                                            force:lightningQuickAction">
+
+
+    <aura:attribute name = "singleCon" type ="Contact" default ="{
+                                                                    'sobjectType':'Contact',
+                                                                    'FirstName':'',
+                                                                    'LastName':'',
+                                                                    'Phone':'',
+                                                                    'Email':'',
+                                                                    'Title':''}"/>
+    
+    <aura:attribute name = "contactid" type ="string"/>
+    <aura:attribute name = "Message" type ="String" />
+    
+    <lightning:card variant="Narrow" title="Create Contact" iconName="standard:contact" footer="{!v.Message}">
+        <aura:set attribute="actions">
+            <lightning:buttonIcon onclick="createContactClientController" iconName="utility:add" variant="border-filled" alternativeText="Show More"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            
+            <lightning:input name="FirstName" label="FirstName" value="{!v.singleCon.FirstName}"/>
+            <lightning:input name="LastName" label="LastName" value="{!v.singleCon.LastName}"/>
+            <lightning:input name="Phone" label="Phone" value="{!v.singleCon.Email}"/>
+            <lightning:input name="Email" label="Email" value="{!v.singleCon.Phone}"/>
+            <lightning:input name="Title" label="Title" value="{!v.singleCon.Title}"/>
+
+
+        </p>
+    </lightning:card>
+</aura:component>	
