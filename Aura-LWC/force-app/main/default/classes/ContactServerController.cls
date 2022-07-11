@@ -14,4 +14,17 @@ public with sharing class ContactServerController {
         }
         return singleContact.id;
     }
+
+    @AuraEnabled
+    public static list<Contact> retrieveContactServerController(){
+        List<Contact> multiContact = new List<contact>();
+        try {
+            multiContact = [SELECT id,FirstName,LastName,Phone,Email,CreatedDate FROM Contact ORDER BY CreatedDate DESC LIMIT 10];
+
+            
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+        return multiContact;
+    }
 }

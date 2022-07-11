@@ -1,5 +1,10 @@
 <!--  ContactServerController is apex class. Reason it is placed here is to activate apex class to use in component. js reach the apex class. In order js to reach apex and request info we MUST add this controller -->
-<aura:component controller ="ContactServerController" > 
+<aura:component controller ="ContactServerController" implements = "force:appHostable,
+                                                                    flexipage:availableforAllPageTypes,
+                                                                    flexipage:availableForRecordHome,
+                                                                    force:hasRecordId,
+                                                                    forceCommunity:availableForAllPageTypes,
+                                                                    force:lightningQuickAction">
 
 <!-- default contact attribute. It sends default contact info in JSON -->
      <aura:attribute name ="singleCont" type= "Contact" default =" 
@@ -15,15 +20,21 @@
 <aura:attribute name ="contactid" type= "String"/>
 <aura:attribute name ="Message" type= "String"/>
 
-Message: {!v.Message}
-
-<ui:inputText label = "First Name" value = "{!v.singleCont.FirstName}"/>
-<ui:inputText label = "Last Name" value = "{!v.singleCont.LastName}"/>
-<ui:inputText label = "Phone" value = "{!v.singleCont.Phone}"/>
-<ui:inputText label = "Email" value = "{!v.singleCont.Email}"/>
-<!-- c.contactClientController is our js controller file. BE CAREFULL Apex attribute name and js Name MUST be different -->
-<ui:button label = "Create" press = "{!c.ContactClientController}"/>
 
 
+
+<lightning:card variant="Narrow" title="Contact Creation" iconName="standard:contact" footer="{!v.Message}">
+    <aura:set attribute="actions">
+        <!-- c.contactClientController is our js controller file. BE CAREFULL Apex attribute name and js Name MUST be different -->
+        <lightning:buttonIcon iconName="utility:adduser" variant="border-filled" alternativeText="Show More" onclick="{!c.ContactClientController}"/>
+    </aura:set>
+    <p class="slds-p-horizontal_small">
+        <lightning:input name="First Name" value = "{!v.singleCont.FirstName}" label="First Name" placeholder="Please type First Name"/>
+        <ui:inputText label = "Last Name" value = "{!v.singleCont.LastName}"/>
+        <ui:inputText label = "Phone" value = "{!v.singleCont.Phone}"/>
+        <ui:inputText label = "Email" value = "{!v.singleCont.Email}"/>
+        
+    </p>
+</lightning:card>
 
 </aura:component>	
