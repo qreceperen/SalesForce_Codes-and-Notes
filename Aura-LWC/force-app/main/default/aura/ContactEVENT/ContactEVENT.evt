@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template">
+     <!--when contact created event will be created  -->
+    <aura:attribute name = "createcontactid" type= "String"/> 
+
+
+</aura:event>
