@@ -1,0 +1,6 @@
+<aura:componentimplements = "flexipage:availableForAllPageTypes" access = "global">
+
+    <aura:attribute name = "textvalue" type "string" default = "Initial Value"/>
+    <lightning:input value = "{!v.textvalue}"/>
+    
+</aura:component>	
