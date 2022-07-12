@@ -1,0 +1,4 @@
+<aura:component implements = "flexipage:availableForAllPageTypes" access = "global" >
+    <aura:import library="lightning:confirm" property="LightningConfirm" />
+    <lightning:button onclick="{! c.openConfirm }" label="Open Confirm"/>
+</aura:component>
