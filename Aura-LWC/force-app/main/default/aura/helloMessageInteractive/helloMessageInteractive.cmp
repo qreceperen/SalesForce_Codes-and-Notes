@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name = "message" type = "String" default="Hi This is first Message"/>
+    <p>{!v.message}</p>
+    <br/>
+    <br/>
+    <br/>
+    <div>
+        <lightning:button label = "You look nice Today."
+                          onclick = "{!c.handleClick2}"/>
+
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <lightning:button label = "Today is going to be a great day!"
+                          onclick = "{!c.handleClick2}"/>
+            
+    </div>
+</aura:component>	
