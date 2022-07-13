@@ -11,7 +11,7 @@
 // }
 
 
-// // Duplicate class to use with variable
+// // Duplicate class to use with variable. Class must not be static in order to duplicate and use.
 
 // ClassName varName = new ClassName();
 

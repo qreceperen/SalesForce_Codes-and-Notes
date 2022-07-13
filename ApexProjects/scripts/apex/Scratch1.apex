@@ -1,8 +1,6 @@
-String target = 'Burlington';
+ContactSearch test = new ContactSearch();
+test.searchForContacts('Stumuller', '75251');
 
-Account [] accts = [SELECT Name FROM Account WHERE Name LIKE ];
-Account[] acct = [SELECT Name FROM Account WHERE Name LIKE '%'+:target+'%'];
 
-system.debug(acct);
 
 

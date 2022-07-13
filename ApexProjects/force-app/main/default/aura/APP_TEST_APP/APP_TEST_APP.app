@@ -1,5 +1,5 @@
 <aura:application extends ="force:slds">
 
-    <c:WholeComponent/>
+    <c:AURA4_CreateContact />
 
 </aura:application>	
