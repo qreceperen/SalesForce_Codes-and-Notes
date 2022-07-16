@@ -1,0 +1,19 @@
+<template>
+
+    <lightning-card  title="TEAM WORK">
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="First Name" placeholder="type here..." 
+                                value ={firstName} onkeyup={changeHandlerFirstName} ></lightning-input>
+            </div>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input type="text" label="Last Name" 
+                                placeholder="type here..." value ={lastName} onkeyup={changeHandlerLastName}></lightning-input>
+            </div>
+            
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-button label="Click" title="Non-primary action" onclick={handleClick}></lightning-button>
+            </div>
+    </lightning-card>
+
+
+</template>
