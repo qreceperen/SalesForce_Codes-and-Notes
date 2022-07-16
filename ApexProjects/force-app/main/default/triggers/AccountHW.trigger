@@ -1,5 +1,3 @@
-
-
 trigger AccountHW on Account (before insert, after insert) {
 
 // Make Ownership = Private when New Account Created and Industry = Banking
