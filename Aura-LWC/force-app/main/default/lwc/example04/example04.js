@@ -16,6 +16,7 @@ export default class Example04 extends LightningElement {
 
         alert("Hello " + this.firstName +' ' + this.lastName);
     }
+    add ceresadfasdasd
 
 
 
