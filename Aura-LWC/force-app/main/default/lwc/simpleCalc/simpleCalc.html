@@ -1,0 +1,24 @@
+<template>
+
+    <lightning-card  title="CALCULATOR" icon-name="utility:advanced_function" alternative-text="Connected">
+
+                <div class="slds-p-horizontal_small">
+                    <lightning-input type="number" label="First Number" placeholder="Please write only number..." value={num1} name = "number1" onchange={inputNumber}></lightning-input>
+                    <lightning-input type="number" label="Second Number" placeholder="Please write only number..." value={num2} name = "number2" onchange={inputNumber2}></lightning-input>
+                </div>
+
+                <div class="slds-m-around_medium">
+                    <lightning-button variant="brand" label="+" title="Primary action" onclick={doAdd} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="-" title="Primary action" onclick={doSub} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="X" title="Primary action" onclick={doMul} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="/" title="Primary action" onclick={doDiv} class="slds-m-left_x-small"></lightning-button>
+                </div>
+
+
+                <div class="slds-p-around_medium lgc-bg" >
+                    <lightning-input label="Result = " name ="result" read-only="true" value ={result}></lightning-input>
+                </div>
+            
+        </lightning-card>
+    
+</template>
