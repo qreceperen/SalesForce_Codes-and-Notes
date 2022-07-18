@@ -6,13 +6,15 @@ export default class SimpleCalc extends LightningElement {
     result;
 
     inputNumber(event){
-        this.num1 = event.target.value;
-        // console.log(this.num1);
+        const currentInputName = event.target.name; // Take the name from input
+        const currentval =event.target.value;       // take value from input
+        if(currentInputName==='number1'){           // Decide which input sends data ( number 1 or number 2)
+            this.num1=currentval;
+        }else{
+            this.num2=currentval;
+        }
     }
-    inputNumber2(event){
-        this.num2 = event.target.value;
-        // console.log(typeof this.num2);
-    }
+
     
     doAdd(){
         this.result= parseInt(this.num1) + parseInt(this.num2);
@@ -24,28 +26,16 @@ export default class SimpleCalc extends LightningElement {
         this.result= parseInt(this.num1) * parseInt(this.num2);
     }
     doDiv(){
+   
         this.result= parseInt(this.num1) / parseInt(this.num2);
     }
+
+    clearAll(){
+    
+        this.template.querySelector('lightning-input[data-name="number1"]').value = null;
+        this.template.querySelector('lightning-input[data-name="number2"]').value = null;   
+        this.template.querySelector('lightning-input[data-name="result"]').value = null;  
+    
+      }
    
 }
-
-// inputNumber(event){
-//     const currentInputName = event.target.name;
-//     const currentval =event.target.value;
-//     if(currentInputName==='number1'){
-//         this.num1=currentval;
-//     }else{
-//         this.num2=currentval;
-//     }
-// }
-// doAdd(){
-//     this.result=parseInt(this.num1)+parseInt(this.num2);
-// }
-
-
-
-// add(event){
-//    this.result= parseInt(this.number1) + parseInt(this.number2);
-//    console.log(this.result);
-    
-// }

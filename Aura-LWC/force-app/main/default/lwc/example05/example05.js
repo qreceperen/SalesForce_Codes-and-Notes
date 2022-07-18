@@ -3,6 +3,7 @@ import { LightningElement } from 'lwc';
 export default class Example05 extends LightningElement {
 
     contacts = [
+        
         {
             Id:1,
             Name:'Amy Taylor',
@@ -10,12 +11,12 @@ export default class Example05 extends LightningElement {
         },
         {
             Id:2,
-            Name:'Recep EREN',
+            Name:'Name 2',
             Title:'IT specialist'
         },
         {
             Id:3,
-            Name:'Gul Kullu',
+            Name:'Name 3 ',
             Title:'Biology Teacher'
         },
     ];
