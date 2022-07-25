@@ -16,3 +16,6 @@ List<List<sObject>> searchlist = [FIND :soslFindClause IN ALL FIELDS
     for(Contact c: searchContacts){
         system.debug(c.Name);
     }
+
+
+
