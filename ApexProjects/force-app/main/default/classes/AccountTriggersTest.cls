@@ -7,9 +7,9 @@ public with sharing class AccountTriggersTest {
         acc.BillingState = 'CV';
         insert acc;
 
-        List<Account> accList = [SELECT Id,Name, ShippingState,BillingState FROM Account WHERE Name LIKE 'TEST-10%' LIMIT 1];
+        List<Account> accList = [SELECT Name, ShippingState,BillingState FROM Account WHERE Name LIKE 'TEST-10%' LIMIT 1];
 
-        System.assertEquals('CV', accList.Id);
+        System.assertEquals('CV', accList[0].ShippingState);
 
     }
 }
