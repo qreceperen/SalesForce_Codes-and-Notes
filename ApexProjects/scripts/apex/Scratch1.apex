@@ -1,21 +1,18 @@
-String soslFindClause = 'Wingo OR SFDC';
+// Account singleAccount = new Account ();
+// singleAccount.Name = "TEST-1 " + "FROM SNIPPET";
 
-List<List<sObject>> searchlist = [FIND :soslFindClause IN ALL FIELDS
-                                RETURNING Account(Name),Contact(FirstName,LastName,Department)];
 
-    Account[] searchAccounts = (Account[])searchlist[0];
-    Contact[] searchContacts = (Contact[])searchlist[1];
+// Account singleAccount= new Account ();
+// singleAccount.Name = 'TEST-7 ' + 'Seconf Test From Snipped';
+// insert singleAccount;
 
-    system.debug('Found the Following accounts.--------------------------------------');
 
-    for(Account a: searchAccounts){
-        system.debug(a.Name);
-    }
-    system.debug('Found the Following contacts.--------------------------------------');
+Account singleAccount= new Account ();
+singleAccount.Name = 'TEST-4 ' + 'Account Trigger';
+singleAccount.BillingState = 'CA';
+insert singleAccount;
 
-    for(Contact c: searchContacts){
-        system.debug(c.Name);
-    }
+
 
 
 

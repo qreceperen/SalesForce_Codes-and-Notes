@@ -12,3 +12,6 @@ Add the member to the List
 
 
 write a todo App
+
+//  Test 
+ sfdx force:lightning:lwc:test:setup

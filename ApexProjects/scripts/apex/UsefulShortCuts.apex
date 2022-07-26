@@ -62,3 +62,4 @@
 
 // // Bulk DELETE (You can apply same to Any Object)
 // List<Contact> conList = [SELECT id,Name FROM Contact WHERE Name Like '%Test%'];
+// delete conList;
