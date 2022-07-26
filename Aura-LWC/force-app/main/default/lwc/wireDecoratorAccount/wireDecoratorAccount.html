@@ -1,0 +1,30 @@
+<!-- sldsValidatorIgnore -->
+<template>
+
+
+
+    <lightning-card variant = "Narrow" title ="Hello" icon-name = "standard:account">
+        <lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text=""></lightning-button-icon>
+
+           <template for:each = {multiAccountList} for:item ="singleAcc">
+               <p key={singleAcc.Id} class ="slds-p-horizontal_small">
+
+                {singleAcc.Id} - {singleAcc.Name} - {singleAcc.CreatedDate}
+                
+                </p>
+
+
+           </template> 
+
+           <lightning-datatable
+                key-field="id"
+                data={multiAccountList}
+                columns={columns}>
+        </lightning-datatable>
+
+        <p slot="footer" > Card Footer</p>
+    </lightning-card>
+    
+</template>
+
+
