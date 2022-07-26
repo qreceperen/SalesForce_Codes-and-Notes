@@ -7,8 +7,8 @@
 
 // SELECT firstName, LastName, Account.Name, Account.Phone, Account.AnnualRevenue FROM Contact 
 
-SELECT Name, BillingAddress, ShippingAddress FROM Account
-
+SELECT Id,Name, (SELECT Name,StageName FROM Opportunities ) FROM Account WHERE Name LIKE 'TEST%'
+SELECT Name FROM Opportunity
 
 
 

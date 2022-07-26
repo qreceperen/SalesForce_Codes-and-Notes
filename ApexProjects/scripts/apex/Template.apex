@@ -5,9 +5,11 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+List<Account> accList = [SELECT Name FROM Account WHERE Name LIKE '%TEST%'];
+List<Opportunity> oppList = [SELECT Name FROM Opportunity WHERE Name LIKE '%TEST%'];
+delete accList;
+delete oppList;
+
 
 
 
