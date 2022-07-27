@@ -63,3 +63,15 @@
 // // Bulk DELETE (You can apply same to Any Object)
 // List<Contact> conList = [SELECT id,Name FROM Contact WHERE Name Like '%Test%'];
 // delete conList;
+
+----------------------------------------------------------------------------------------------
+
+// // SOQL Calls
+
+// // Custom object Parent to Child Sample
+// SELECT Address__c,Picture__c,Broker__r.Name FROM Property__c
+
+// // Custom Object Child to Parent Sample
+// SELECT Name, (SELECT Address__c, Price__c FROM Properties__r) FROM Broker__c
+
+---------------------------------------------------------------------------------------------------
