@@ -24,14 +24,6 @@ for(Account acc: accList){
     update acc;
 }
 
-
-
-
-
 // List<Account> accList = [SELECT Name FROM Account WHERE  Name LIKE 'TEST%' ];
 // delete accList;
-
-
-
-
 
