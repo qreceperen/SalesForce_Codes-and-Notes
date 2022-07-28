@@ -1,4 +1,6 @@
-SELECT Address__c,Picture__c,Broker__r.Name FROM Property__c
+SELECT Name,Broker__r.Email__c FROM Property__c
 
 
 SELECT Name, (SELECT Address__c, Price__c FROM Properties__r) FROM Broker__c
+
+
